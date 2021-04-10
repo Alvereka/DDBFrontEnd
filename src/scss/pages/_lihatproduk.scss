@@ -1,0 +1,83 @@
+.section-keterangan {
+  margin-top: 70px;
+  display: flex;
+  //   justify-content: center;
+
+  flex-direction: column;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  background: white;
+
+  .product-overlay {
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Sit on top of the page content */
+    // display: block;
+    color: white;
+    width: 100%; /* Full width (cover the whole page) */
+    height: calc(100% - 70px); /* Full height (cover the whole page) */
+    top: 70px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.show {
+      display: flex;
+    }
+  }
+
+  .section-judul {
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 35pt;
+    color: #1c4d86;
+    // width: 90%;
+    margin-left: 10%;
+    align-self: flex-start;
+    font-weight: 700;
+    text-align: left;
+  }
+  // .kota {
+  //   width: 60%;
+  //   align-self: center;
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  //   grid-gap: 30px;
+  //   justify-items: center;
+  // }
+  .Novel {
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    // align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // grid-gap: 30px;
+    justify-items: center;
+  }
+  .city {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .section-lokasi {
+    margin-top: 70px;
+    .section-judul {
+      margin-top: 20px;
+      font-size: 20px;
+      // width: calc(100vw - 16px);
+      margin-bottom: 0px;
+      align-self: center;
+      margin-left: 0px;
+    }
+  }
+}

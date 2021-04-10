@@ -1,5 +1,6 @@
 import React, { Suspense, Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import logo from "../../logo.svg";
 
 import routes from "../../config/routes/UserRoutes";
 const loading = <div className="suspense-page"> Loading... </div>;
@@ -9,10 +10,7 @@ export default class Home extends Component {
     menuOpened: "none",
   };
 
-  menu = [
-    { title: "Produk", navigate: "/katalog" },
-    { title: "Lokasi Store", navigate: "/marketplaces" },
-  ];
+  menu = [{ title: "", navigate: "" }];
 
   handleMenuOpen(e) {
     this.setState({
@@ -78,7 +76,7 @@ export default class Home extends Component {
             </div>
           </div>
           <div className="navbar-mid">
-            {/* <img src={logo} height="50px" alt="sukun-logo" /> */}
+            {<img src={logo} height="50px" alt="sukun-logo" />}
           </div>
           <div className="navbar-right" onClick={() => this.contactUsHandler()}>
             <i className="fa fa-comments"></i>

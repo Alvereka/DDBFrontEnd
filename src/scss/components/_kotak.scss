@@ -1,0 +1,49 @@
+.ket {
+  // width: 200px;
+  // height: 300px;
+
+  border-radius: 35px;
+  border: 3px solid #6baefb;
+  padding: 10px;
+  background: #e3f0ff;
+}
+.kotak-image {
+  position: relative;
+  width: 100px;
+  height: 65px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  img {
+    width: 25px;
+    max-width: 55px;
+    max-height: 55px;
+  }
+}
+
+.kotak-judul {
+  text-align: center;
+  margin-top: 18px;
+  text-transform: uppercase;
+}
+.kotak-logo {
+  width: 100px;
+  height: 65px;
+}
+@media screen and (max-width: 950px) {
+  .kotak-image {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 150npmpx;
+  }
+  .kotak-logo {
+    width: 150px;
+    height: 150px;
+  }
+}

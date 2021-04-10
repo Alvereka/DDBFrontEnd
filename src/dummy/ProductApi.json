@@ -1,21 +1,21 @@
 [
   {
     "id": 2,
-    "title": "Sukun Magno",
+    "title": "Incidious",
     "image": null,
-    "status": 1,
-    "description": "Feel the Power.",
+    "status": 2,
+    "description": "Serem Boy.",
     "categoryId": 1,
-    "Category": { "id": 1, "name": "Sigaret Kretek Tangan" }
+    "Category": { "id": 1, "name": "Incidous" }
   },
   {
     "id": 4,
-    "title": "Sukun Executive",
+    "title": "Love in Paris",
     "image": null,
     "status": 1,
-    "description": "Cara baru nikmatin",
+    "description": "Percintaan di paris",
     "categoryId": 1,
-    "Category": { "id": 1, "name": "Sigaret Kretek Tangan" }
+    "Category": { "id": 1, "name": "Love in Paris" }
   },
   {
     "id": 5,

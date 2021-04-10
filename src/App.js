@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "./layouts";
 // import appConfig from "./conficg/app";
 
@@ -26,12 +26,16 @@ export default class App extends Component {
     if (!isReady) {
       return null;
     }
-    return <HashRouter>{this.renderLayoutRoutes()}</HashRouter>;
+    return <Router>{this.renderLayoutRoutes()}</Router>;
   }
 
   renderLayoutRoutes() {
     return (
       <Switch>
+        <Route
+          path="/lihatproduk/:id"
+          component={(props) => <Home {...this.getExtendedProps(props)} />}
+        />
         <Route
           path="/"
           component={(props) => <Home {...this.getExtendedProps(props)} />}
