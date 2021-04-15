@@ -10,7 +10,7 @@ import axios from "axios";
 
 export default class Home extends Component {
   token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRnJlZGVyaWNrIFNjaG9lbiIsImVtYWlsIjoiQWxsYW4uU3RpZWRlbWFubjQ3QHlhaG9vLmNvbSIsImlkIjoxLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MTgyMzIxNjMsImV4cCI6MTYxODgzNjk2M30.Ho32TftcX4eNuIOBAvJog5Qp-xIkRyZqHPYsjByW7Y4";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRnJlZGVyaWNrIFNjaG9lbiIsImVtYWlsIjoiQWxsYW4uU3RpZWRlbWFubjQ3QHlhaG9vLmNvbSIsImlkIjoxLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MTg0Nzk1NzEsImV4cCI6MTYxOTA4NDM3MX0.5bcMZfbPZZO1ylajZzEVGbMNURQaDQg2sIDNGxjkXRE";
 
   state = {
     products: [],

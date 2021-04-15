@@ -3,6 +3,7 @@ import { lazy } from "react";
 // Import The Page
 const Home = lazy(() => import("../../pages/Home/Home"));
 const Lihatproduk = lazy(() => import("../../pages/Home/Lihatproduk"));
+const Kota = lazy(() => import("../../pages/Home/Kota"));
 
 // Routing
 const routes = [
@@ -15,6 +16,11 @@ const routes = [
     path: "lihatproduk/:id",
     name: "lihat",
     component: Lihatproduk,
+  },
+  {
+    path: "kota/:id",
+    name: "kota",
+    component: Kota,
   },
 ];
 

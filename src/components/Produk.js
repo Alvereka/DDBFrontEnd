@@ -18,7 +18,9 @@ export default class Produk extends Component {
             <div className="overlay-content">{this.props.deskripsi}</div>
             <button
               className="btn-beli"
-              onClick={() => this.props.navigate("/Lihatproduk/" + this.props.id)}
+              onClick={() =>
+                this.props.navigate("/Lihatproduk/" + this.props.id)
+              }
             >
               Pinjam ini
             </button>
