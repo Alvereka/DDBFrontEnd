@@ -51,9 +51,11 @@
   //   grid-gap: 30px;
   //   justify-items: center;
   // }
-  .Novel {
-    align-items: center;
+  .GambarNovel {
+    align-items: left;
+    margin-left: 0px;
     margin-top: 30px;
+    margin-bottom: 30px;
     width: 100%;
     // align-self: center;
     display: flex;
@@ -61,10 +63,35 @@
     justify-content: center;
     // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     // grid-gap: 30px;
-    justify-items: center;
+  }
+  .GambarNovel2 {
+    align-items: left;
+    margin-top: 10px;
+    margin-left: 150px;
+    width: 100%;
+    // align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // grid-gap: 30px;
+    // justify-items: left;
   }
   .city {
     margin: 20px;
+  }
+  .Tombol {
+    align-items: left;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    // align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // grid-gap: 30px;
   }
 }
 

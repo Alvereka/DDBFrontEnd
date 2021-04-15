@@ -6,8 +6,12 @@ import { FadeInSection } from "../../components/FadeInSection";
 
 import dummyCategory from "../../dummy/CategoryApi.json";
 import dummyProduct from "../../dummy/ProductApi.json";
+import axios from "axios";
 
 export default class Home extends Component {
+  token =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRnJlZGVyaWNrIFNjaG9lbiIsImVtYWlsIjoiQWxsYW4uU3RpZWRlbWFubjQ3QHlhaG9vLmNvbSIsImlkIjoxLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MTgyMzIxNjMsImV4cCI6MTYxODgzNjk2M30.Ho32TftcX4eNuIOBAvJog5Qp-xIkRyZqHPYsjByW7Y4";
+
   state = {
     products: [],
     filter: [],
@@ -47,24 +51,17 @@ export default class Home extends Component {
     }
   }
 
-  getDataProducts() {
-    this.setState({
-      products: dummyProduct,
-    });
-    // return ProductApi.get().then((res) =>
-    //   this.setState(
-    //     { ...this.state, products: res.data, filter: res.data },
-    //     () => {
-    //       console.log("Products : ", this.state.products);
-    //     }
-    //   )
-    // );
-  }
-
-  getDataCategory() {
-    this.setState({
-      category: dummyCategory,
-    });
+  getDataBooks() {
+    axios
+      .get("http://localhost:3000/book", {
+        headers: { Authorization: `Bearer ${this.token}` },
+      })
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          products: response.data,
+        });
+      });
     // return CategoryApi.get().then((res) =>
     //   this.setState({ ...this.state, category: res.data }, () => {
     //     console.log("category : ", this.state.category);
@@ -73,9 +70,8 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    document.title = "Katalog Produk | Sukun Online Store";
-    this.getDataCategory();
-    this.getDataProducts();
+    document.title = "Data Buku Penyewaan";
+    this.getDataBooks();
   }
 
   render() {
@@ -83,7 +79,7 @@ export default class Home extends Component {
       <section className="section-katalog">
         <div className="section-title">Katalog Buku</div>
         <div className="section-content">
-          <div className="category">
+          {/* <div className="category">
             <Kategori
               name="Semua"
               warna="#00AFEF"
@@ -103,7 +99,7 @@ export default class Home extends Component {
                   );
                 })
               : "No Data"}
-          </div>
+          </div> */}
           <div className="products">
             {this.state.filterCategory == 0
               ? this.state.products.map((product, index) => {
@@ -113,8 +109,8 @@ export default class Home extends Component {
                       navigate={this.props.navigate}
                       id={product.id}
                       name={product.title}
-                      deskripsi={product.description}
-                      gambar={product.image}
+                      deskripsi={product.author}
+                      gambar={product.coverUrl}
                       show={true}
                     ></Produk>
                   );
@@ -126,8 +122,8 @@ export default class Home extends Component {
                       navigate={this.props.navigate}
                       id={product.id}
                       name={product.title}
-                      deskripsi={product.description}
-                      gambar={product.image}
+                      deskripsi={product.author}
+                      gambar={product.coverUrl}
                       show={
                         this.state.filterCategory == product.Category.id
                           ? true
